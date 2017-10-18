@@ -1,15 +1,15 @@
-// Import React
+
 import React from 'react';
 import { Component } from 'react';
 
-// Import Material-ui
+
 import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card';
 import TextField from 'material-ui/TextField';
 
-// Import Style
+
 import style from '../../../client/styles.js';
 
-// Create Component
+
 class AddRoutineName extends Component {
 
   constructor(props) {
@@ -18,10 +18,10 @@ class AddRoutineName extends Component {
   }
 
   _handleChange(event, index, value){
-    // Update Locally
+   
     this.setState({routineName: event.target.value});
 
-    // Update in Parent
+
     this.props._changeRoutineName(event.target.value);
   }
 

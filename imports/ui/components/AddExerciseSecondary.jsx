@@ -1,24 +1,24 @@
-// Import React
+
 import React from 'react';
 import { Component } from 'react';
 
-// Import React Grid System
+
 import { Container, Row, Col, Visible, Hidden } from 'react-grid-system';
 
-// Import Material-ui
+
 import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card';
 import TextField from 'material-ui/TextField';
 import FloatingActionButton from 'material-ui/FloatingActionButton';
 import ContentAdd from 'material-ui/svg-icons/content/add';
 import ContentRemove from 'material-ui/svg-icons/content/remove';
 
-// Import Components
+
 import UnitsDropDownMenu from '../components/UnitsDropDownMenu';
 import AddRepPrimary from '../components/AddRepPrimary';
 import AddRepSecondary from '../components/AddRepSecondary';
 
 
-// Create Component
+
 class AddExerciseSecondary extends Component {
 
   constructor(props) {
@@ -26,12 +26,12 @@ class AddExerciseSecondary extends Component {
   }
 
   _handleChange(event, index, value){
-    // Edit the name of the selected Exerise within the selected Workout
+   
     this.props._editExerciseName(this.props._iOfWorkout, this.props._iOfExercise, event.target.value);
   }
 
   _handleClick(){
-    // Remove targetted Excerise from the selected Workout 
+  
     this.props._removeSelectedExercise(this.props._iOfWorkout, this.props._iOfExcerise);
   }
 
@@ -68,7 +68,7 @@ class AddExerciseSecondary extends Component {
             {/* ++++++++++ ITERATE OVER REPS ++++++++++ */}
             {this.props._submissionObject.workouts[this.props._iOfWorkout].exercises[this.props._iOfExercise].reps.map(function(search, i) {
 
-              // First, render the primary excercise
+              
               if(i==0){
                 return (
                   <div key={"workout-" + this.props._iOfWorkout + "-excercise-" + this.props._iOfExercise + "-rep-" + i} >
@@ -86,7 +86,7 @@ class AddExerciseSecondary extends Component {
                 );
               }
               
-              // Then, render any additional excercises
+             
               else{
                 return(
                   <div key={"workout-" + this.props._iOfWorkout + "-excercise-" + this.props._iOfExercise + "-rep-" + i}>

@@ -1,26 +1,25 @@
-// Import the Meteeeeeeooooor!
+
 import { Meteor } from 'meteor/meteor';
 
-// Import React
+
 import React from 'react';
 import { Component } from 'react';
 import { browserHistory } from 'react-router';
 
-// Import React Grid System
+
 import { Container, Row, Col, Visible, Hidden } from 'react-grid-system';
 
-// Import Material-ui 
+
 import RaisedButton from 'material-ui/RaisedButton';
 import { Card, CardActions, CardHeader, CardText } from 'material-ui/Card';
 
-// Import Components
 import SelectWorkoutButton from '../components/SelectWorkoutButton';
 
-// Import Styles
+
 import style from '../../../client/styles.js';
 
 
-// Page Component
+
 class SelectWorkout extends Component {
 
   constructor(props) {
@@ -31,16 +30,15 @@ class SelectWorkout extends Component {
 
   componentWillMount(){
 
-    // Get Routine Id
     Meteor.call('getCurrentRoutine', function(err, res){
 
-      // Collect Routine Name
+   
       this.setState({routineName: res.routineName})
 
-      // Get Workouts via Current Routine Id
+
       Meteor.call('getWorkoutOptions', res.routine_id, function(err, res){
 
-        // Collect all Workouts (Name + Id)
+        
         this.setState({workouts: res});
 
       }.bind(this));
@@ -51,16 +49,13 @@ class SelectWorkout extends Component {
 
 
   _selectWorkout(workoutObj){
-    // console.log('Exit Page and Keep Changes')
-    // console.log(workoutObj)
 
-    // Prep Exercises Array for next page (i.e add empty array into each excercise object)
     for(var i=0; i < workoutObj.exercises.length; i++){
       workoutObj.exercises[i]['currentWorkoutWeights'] = [];
       workoutObj.exercises[i]['prevWorkoutWeights'] = [];
     }
 
-    // Change path to log page and pass (stringified) data to the log page
+   
     browserHistory.push({ 
       pathname: '/workout/log',
       query: {workoutObj: JSON.stringify(workoutObj), routineName: this.state.routineName}
@@ -69,14 +64,14 @@ class SelectWorkout extends Component {
   }
 
   _reRouteToCreate(){
-    // Takes you to the create page
+    
     browserHistory.push({ 
       pathname: '/workout/create'
     });
   }
 
   _cancelSelection(){
-    // Cancel takes you back to dashboard, no selection is made
+    
     browserHistory.push({ 
       pathname: '/dashboard'
     });

@@ -1,12 +1,12 @@
-// Import React
+
 import React from 'react';
 import { Component } from 'react';
 import style from '../../../client/styles.js';
 
-// Import React Grid System
+
 import { Container, Row, Col, Visible, Hidden } from 'react-grid-system';
 
-// Import Material-ui 
+
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import TextField from 'material-ui/TextField';
 import {List, ListItem} from 'material-ui/List';
@@ -36,7 +36,9 @@ class HomePage extends Component {
                 </center>
               </Row>
             </CardActions>
-          
+            <CardMedia>
+              <img src="img/people.jpg" />
+            </CardMedia>
           </Card>
 
         </div>

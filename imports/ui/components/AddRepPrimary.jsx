@@ -1,18 +1,18 @@
-// Import React
+
 import React from 'react';
 import { Component } from 'react';
 
-// Import Material-ui
+
 import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card';
 import TextField from 'material-ui/TextField';
 import FloatingActionButton from 'material-ui/FloatingActionButton';
 import ContentAdd from 'material-ui/svg-icons/content/add';
 import ContentRemove from 'material-ui/svg-icons/content/remove';
 
-// Import Style
+
 import style from '../../../client/styles.js';
 
-// Create Component
+
 class AddRepPrimary extends Component {
 
   constructor(props) {
@@ -20,17 +20,16 @@ class AddRepPrimary extends Component {
   }
 
   _handleChange(event, index, value){
-    // Edit the number of Reps for the selected Exercise in the selected Workout
+    
     this.props._editNumberOfReps(this.props._iOfWorkout, this.props._iOfExercise, this.props._iOfRep, event.target.value);
   }
 
   _handleAddClick(){
-    // Add another Rep to the selected Exercise in the selected Workout
+    
     this.props._addAnotherRep(this.props._iOfWorkout, this.props._iOfExercise);
   }
 
   _handleRemoveClick(){
-    // Remove last Rep in the selected Exercise in the selected Workout
     this.props._removeLastRep(this.props._iOfWorkout, this.props._iOfExercise);
   }
 

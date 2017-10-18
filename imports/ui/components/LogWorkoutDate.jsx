@@ -1,16 +1,16 @@
-// Import React
+
 import React from 'react';
 import { Component } from 'react';
 
-// Import Material-ui 
+
 import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card';
 import DatePicker from 'material-ui/DatePicker';
 
-// Import Style
+
 import style from '../../../client/styles.js';
 
 
-// Create Component
+
 class LogWorkoutDate extends Component {
 
   constructor(props) {
@@ -21,12 +21,12 @@ class LogWorkoutDate extends Component {
   }
 
   _handleChange(event, date){
-    // Update Locally
+    
     this.setState({
       controlledDate: date,
     });
 
-    // Update in Parent
+    
     this.props._editCurrentWorkoutDate(date);
   }
 

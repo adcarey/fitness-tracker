@@ -1,9 +1,9 @@
-// Import React Essentials
+
 import React from 'react';
 import { render } from 'react-dom';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 
-// Import Pages and/or Components
+
 import AppLayout from '../../ui/layouts/AppLayout.jsx';
 import NotFound from '../../ui/pages/NotFound.jsx';
 import SignUpPage from '../../ui/pages/SignUpPage.jsx';
@@ -17,7 +17,7 @@ import Dashboard from '../../ui/pages/Dashboard.jsx';
 import UserProfile from '../../ui/pages/UserProfile.jsx';
 import SelectWorkout from '../../ui/pages/SelectWorkout.jsx';
 
-// Release the meeeettteeeoooor!
+
 Meteor.startup( () => {
 
   Store.subscribe(refresh);
@@ -28,7 +28,7 @@ Meteor.startup( () => {
 
   function redirectIfSignedIn(){
     if(Meteor.userId() != null){
-      // http://stackoverflow.com/questions/5410682/parsing-a-json-string-in-ruby
+     
       console.log("Redirecting Signed In User");
       browserHistory.replace('/dashboard');
     } else {

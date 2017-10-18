@@ -1,8 +1,8 @@
-// Import React
+
 import React from 'react';
 import { Component } from 'react';
 
-// Import Material-ui 
+
 import MenuItem from 'material-ui/MenuItem';
 import SelectField from 'material-ui/SelectField';
 
@@ -16,10 +16,10 @@ class UnitsDropDownMenu extends Component {
   }
 
   _selectFieldChange(event, index, value){
-    // Locally - Set the unit dropdown value
+    
     this.setState({value})
 
-    // Globally - Set the unit dropdown value
+  
     this.props._editExerciseUnits(this.props._iOfWorkout, this.props._iOfExercise, value)
   }
 

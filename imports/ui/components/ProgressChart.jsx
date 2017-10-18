@@ -1,4 +1,4 @@
-// Import React
+
 import React from 'react';
 import { Component } from 'react';
 import {render} from 'react-dom';
@@ -6,16 +6,16 @@ import Blaze from 'meteor/gadicc:blaze-react-component';
 import { Session } from 'meteor/session'
 import { Meteor } from 'meteor/meteor';
 
-// Import Material-ui
+
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card';
 import DropDownMenu from 'material-ui/DropDownMenu';
 import MenuItem from 'material-ui/MenuItem';
 
-// Import Styles
+
 import style from '../../../client/styles.js';
 
-// Create Component
+
 class ProgressChart extends Component {
   
   constructor(props) {

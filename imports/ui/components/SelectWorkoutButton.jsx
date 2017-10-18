@@ -1,12 +1,12 @@
-// Import React
+
 import React from 'react';
 import { Component } from 'react';
 
-// Import Material-ui
+
 import RaisedButton from 'material-ui/RaisedButton';
 
 
-// Create Component
+
 class SelectWorkoutButton extends Component {
 
   constructor(props) {

@@ -1,15 +1,15 @@
-// Import React
+
 import React from 'react';
 import { Component } from 'react';
 
-// Import React Grid System
+
 import { Container, Row, Col, Visible, Hidden } from 'react-grid-system';
 
-// Import Material-ui 
+
 import TextField from 'material-ui/TextField';
 
 
-// Create Component
+
 class LogRepWeight extends Component {
 
   constructor(props) {
@@ -22,7 +22,7 @@ class LogRepWeight extends Component {
   }
 
   componentWillMount(){
-    // Show the word "weight" if no previous log was done yet
+   
     let prevRepWeight = this.props._prevWorkoutRepWeight;
     if(prevRepWeight == undefined){
       this.setState({prevRepHint: 'weight'});
@@ -34,18 +34,16 @@ class LogRepWeight extends Component {
 
   _handleChange(event, date){
 
-    // Log the Weight of the selected Rep in the selected Exercise
+
     this.props._editCurrentWorkoutRepWeight(this.props._exerciseNumber, this.props._repNumber, event.target.value);
 
-    // console.log('Weight: ' + event.target.value)
-    // console.log('In Exercise: ' + this.props._exerciseNumber)
-    // console.log('In Rep: ' + this.props._repNumber)
+ 
 
   }
 
   _writeFailure(repValue){
 
-    // Return xf for any empty array (lift to failure)
+    
     if(repValue == ""){
       return "f";
     }

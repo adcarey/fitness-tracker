@@ -1,22 +1,22 @@
-// Import React
+
 import React from 'react';
 import { Component } from 'react';
 
-// Import React Grid System
+
 import { Container, Row, Col, Visible, Hidden } from 'react-grid-system';
 
-// Import Material-ui 
+
 import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card';
 import TextField from 'material-ui/TextField';
 
-// Import Components
+
 import LogRepWeight from '../components/LogRepWeight';
 
-// Import Style
+
 import style from '../../../client/styles.js';
 
 
-// Create Component
+
 class LogExercise extends Component {
 
   constructor(props) {

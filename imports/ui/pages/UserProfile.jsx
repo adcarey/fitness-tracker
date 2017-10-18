@@ -1,8 +1,8 @@
-// Import React
+
 import React from 'react';
 import { Component } from 'react';
 
-// Import Material-UI components
+
 import { Container, Row, Col, Visible, Hidden } from 'react-grid-system';
 
 import { browserHistory } from 'react-router';
@@ -37,8 +37,7 @@ class UserProfile extends Component{
 	}
 
 	handleChange(event,index,value){
-
-		//console.log(event, index, value)		
+		
 		Meteor.call("getRoutineName", value, (err, res) => {
 			this.setState({value: value, currentRoutineName: res});	
 			console.log(this.state)
@@ -69,18 +68,6 @@ class UserProfile extends Component{
 
 	componentWillMount(){
 
-		// Meteor.call("getRoutines", (err,res) => {
-		// 	if(err) throw err;
-
-		// 	this.setState({routine_ids: res})
-		// 	console.log("should be array:" + res)
-		// 	Meteor.call("getRoutineNames", res, (err,res2) => {
-
-		// 		this.setState({routines: res2})
-		// 		console.log("names: " + res2);
-		// 		console.log(this.state.value)
-		// 	})
-		// })
 		Meteor.call("getRoutineObjects", (err,res) => {
 			console.log(res)
 			if(res.length == 0){

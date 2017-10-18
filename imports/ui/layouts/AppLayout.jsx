@@ -23,7 +23,7 @@ class AppLayout extends React.Component {
 
   componentDidMount(){
     Store.subscribe(this._getState.bind(this));
-    // setInterval(this._getState.bind(this), 500);
+
     console.log(this.state);
   }
 
