@@ -64,7 +64,8 @@ Meteor.methods({
     })
   },
 
-  
+  getRoutines() {
+    var currentUser = UserProfile.findOne({ user_id: Meteor.userId() });
     return currentUser.routines;
   },
 
